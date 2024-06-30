@@ -1,5 +1,5 @@
 #include <iostream>
-#include <locale.h>
+#include <locale.h> //Llamado a la librería que permitirá hacer uso de acentos
 using namespace std;
 
 char* mayusIniciales(char cadena[]){
@@ -12,7 +12,7 @@ char* mayusIniciales(char cadena[]){
 		if(verificador==true||i==0){
 			cadena[i]=toupper(cadena[i]);
 		}
-		if(cadena[i]==' '){ //Verifica si el carácter es una espacion en blanco
+		if(cadena[i]==' '){ //Verifica si el carácter es un espacio en blanco
 			verificador=true;
 		}else{
 			verificador=false;
@@ -22,7 +22,7 @@ char* mayusIniciales(char cadena[]){
 }
 
 int main(){
-	setlocale(LC_ALL, "spanish");
+	setlocale(LC_ALL, "spanish"); //Definición de la función setlocale
 	char minus[50]="cáceres patrimonio de la humanidad";
 	cout<<mayusIniciales(minus)<<endl;
 	return 0;	
