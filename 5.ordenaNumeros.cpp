@@ -29,7 +29,15 @@ int main(){
 			menor=lista[i];		
 		}
 	}
-	cout<<"El numero menor es: "<<menor<<" y se repite: "<<contadorRepeticion(n,menor,lista)<<" veces"<<endl;
-	cout<<"El numero mayor es: "<<mayor<<" y se repite: "<<contadorRepeticion(n,mayor,lista)<<" veces"<<endl;
+	if(contadorRepeticion(n,menor,lista)==1){
+		cout<<"El numero menor es: "<<menor<<" y se repite 1 vez"<<endl;
+	}else{
+		cout<<"El numero menor es: "<<menor<<" y se repite: "<<contadorRepeticion(n,menor,lista)<<" veces"<<endl;
+	}
+	if(contadorRepeticion(n,mayor,lista)==1){
+		cout<<"El numero mayor es: "<<mayor<<" y se repite 1 vez"<<endl;
+	}else{
+		cout<<"El numero mayor es: "<<mayor<<" y se repite: "<<contadorRepeticion(n,mayor,lista)<<" veces"<<endl;
+	}
 	return 0;
 }
